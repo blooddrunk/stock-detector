@@ -6,16 +6,20 @@ const querystring = require('querystring')
 const serverURL =
   'https://sc.ftqq.com/SCU9399Tf68579c48efce0e83d5798da3cafcfc7594b6376cdb65.send'
 
+let reported = false
+
 HCCrawler.launch({
-  headless: true,
+  // headless: false,
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
   timeout: 0,
   evaluatePage: () => ({
     inStock: $('#soldOut_btnArea').hasClass('non-display'),
   }),
   onSuccess: ({ result, options }) => {
-    if (result && result.inStock) {
+    if (!reported && result && result.inStock) {
       console.log('in stock')
+
+      reported = true
       const param = {
         text: '镜片有货啦',
         desp: options.url,
