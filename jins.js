@@ -33,7 +33,7 @@ HCCrawler.launch({
   },
 }).then(crawler => {
   crawler.queue({
-    url: 'https://www.jins.com/jp/item/MUF-18S-318_392.html',
+    url: 'https://www.jins.com/jp/item/CFS-16S-121_841.html',
     timeout: 0,
   })
   crawler.onIdle().then(() => crawler.close())
