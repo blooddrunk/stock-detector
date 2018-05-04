@@ -7,7 +7,6 @@ const serverURL =
   'https://sc.ftqq.com/SCU9399Tf68579c48efce0e83d5798da3cafcfc7594b6376cdb65.send'
 
 HCCrawler.launch({
-  headless: false,
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
   evaluatePage: () => ({
     inStock: $('#soldOut_btnArea').hasClass('non-display'),
