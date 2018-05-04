@@ -1,1 +1,1 @@
- node D:\web\crawler\index.js
+ node D:\web\crawler\jins.js

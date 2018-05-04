@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "headless-chrome-crawler": "^1.4.0",
-    "superagent": "^3.8.2"
+    "headless-chrome-crawler": "^1.6.0",
+    "superagent": "^3.8.3"
   },
   "devDependencies": {}
 }

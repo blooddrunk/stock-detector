@@ -1,0 +1,1 @@
+*/5 * * * * node /home/crawler/stock-detector/jins.js
