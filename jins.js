@@ -7,7 +7,9 @@ const serverURL =
   'https://sc.ftqq.com/SCU9399Tf68579c48efce0e83d5798da3cafcfc7594b6376cdb65.send'
 
 HCCrawler.launch({
+  headless: true,
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  timeout: 0,
   evaluatePage: () => ({
     inStock: $('#soldOut_btnArea').hasClass('non-display'),
   }),
@@ -28,6 +30,7 @@ HCCrawler.launch({
 }).then(crawler => {
   crawler.queue({
     url: 'https://www.jins.com/jp/item/MUF-18S-318_392.html',
+    timeout: 0,
   })
   crawler.onIdle().then(() => crawler.close())
 })
